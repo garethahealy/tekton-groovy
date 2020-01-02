@@ -1,0 +1,43 @@
+sudo: required
+dist: trusty
+addons:
+  apt:
+    packages:
+    - nodejs
+    - npm
+  sonarqube:
+    organization: garethahealy-github
+    token:
+      secure: IthSqB5vXNh+IYJe4xokX/KBXQR0lCg3sh8EOr3u9riNqb2nZJkMs7UzjA5UMi5NYo2GIfjwhZUcT2RdUpaMgkpjAT2RqOXJGzm1bwjKxigr03+52Q7YSSAxn2dYLErPeypZ9Umers1x/y4fQJlGIsVqk1CmYCxPl8WUozIotCSzqIZXGs89FQ7GXy273DqBITOJmDooWhHHoGvEQF+hnYNk86MDUJm7ofX/D/isp4qbqgm2AuuBncDebbTgWFLadpTgwruiVFH47Bgfml6i8WuQBFN4sNLoGoeqDSYbYEMTDslf9ht4myZyN9YD4NhC6bb9aDAWgzR8ltB9umX821Gc0sFLWa2wHp/j6Z1uLGnvXNQe9v1g2TvXuxE5knIQ3sMI/PsYN9SsUoFDiC60LloXeVM4T5oqVzY4z2u9M1o3fiHnyli2gwmgZuWJici74jGxJc/8/on/4T0SV6irXj+KC/z6xFBsPGRx5bdA22QyssoYWoVFQ3BB5xGNWNCt3f0u4F8d2wvCvMItAg/Ur8qNucDWytJWRciNU0y0bqDNwUxNLIFnb1HL+hblMyDj9Sm/SYOpONsGFswDuPZoqkm3vijRGAfSMYAPNpSDPGTGmYZszRvwIY4Wxgmz0PTjIBQKvSPnzRM7rWbGjKXTHRihyAkQaTSiw8uytbWeJDQ=
+env:
+  global:
+  - secure: JtXcmoEqOVW4ETJOqdhrWyvlQheuvu859n7lj8mceSVqC4KoS68RV5u1fQxohoodSJrg1YBg5eAx5Dsu3T3TY3C0lv5ARq40QXoM7FTa2kH73PtSXlcvgPLPuJztWyxWatHIgyauEjsll0ujirUy3Y4gb//ovziHg1gFUMtIRvrbbzB0dpf4IssC16Hwfh60rkEdvFOHjIFj45Oa9C1KZYm1EVQOKJkwjjEJDxWWQCF7br/MxFsyWRNZlCbBPl0G/VTPVHHCLKPFWuxyMdrwPQ3o60aEJwFjeozrlmzKpkEq/LXZX0bETVO4EnBuJaeJdH6zFWP47O/s3gDLaC/7RluuZbn/mgR8QSSan1fffDYNgDwZ983DLXb8KVyTmMo9Lo8rjIt7C/DRnVv8OJZDHLRpcXDx22bAbIjOmiI/ThzwodDQNICx8UQ+RM1W6/wdZBwOp0ZeECb7Juca0K3XXXYxt2TELXRZD/9DBAQDO1vWIUntkwmYMpjLinxOfmGsfStQHL6iV8jt8du+eDU6B55hsZKjn/lfRuXJgv7dfALd7yKHuJu+S5qiAVQbkANXsseeGYm2meHwhqdxJ9RcWap7x4cmeG7GkQqFd+0pAIF4clDHi79RaaZ2jDE+wr5vSjJGb1a9rvFdME+vRdLTgC+6tl3WC9o2WdZGL+gLnG0=
+  - secure: NPmq4vHnrsKEzhoS3J/WDN3szhchzpkQDH6S+gEG7ENK3KCzTMzaCFHgnvIejhM/62We/y+Qutf4n+SiuLijn/JA14No64Ah+NjRPWKNahNyRNn1NQOqp1vB2+lv6Y6aCu4wft/MDoIKdv8IKtmjhPT1QUjwOQFfDgTiUPVC9XHOj6OvdgpZ2TQkInlcY2TOwy05ifxIMnml5Ym5IBRI3HZpErUxiP4qc2zfYLCHlo6flrHJfJLpzDiLY929zf/7sIgJIbWVn12hG5Wm6JWy1w5h6/dDhv0CORbG1nZPv/dlbhGoGDkS0OlXEqPvJp6gZatV6n2uATWz9XJfcYXmnwtgvyrD7E5LSGcDt2CXNIC8AwvgvJgCf7zhUShe3F/93w4F4w7GmHAP+/HX/SMolWFYnGZHlYHEW8G8qSk6DHTWHpOljGBUc7Ck7z0p7AWjlIEkqnNnTJV75Xdy3tLoprR6UsqaYe7cPw99sQ0dqMeaK2CEdbLJlmSUyt/Txc6ITWtSeRSBYb4yqCgg39hl6tdvmNhODq7t3jP9upN56OKxDSgzu5p2x8a4smbOWvIZct6sTStg3T4y6t2gwDjLbp1me+VkySk3x6UiN+HoWuMj9mD4zCV2tWGmPZ8WdyIQWmbp1+n4RxMYJRNl4oS+MXa5q/fTpLaSaBHQRz3uHik=
+  - secure: p8gpZ7Ko7qAXvx9OLMDWvo9jxIbJ8XONZRyN2b2XdH6VzGKv9FaXhBXm52wN+fXeACL26LvIig5QYJounBLdPm4+oSPDl2WnxvBEQGabyR1MTcRcbgK92InSMkl+V4L/XMypCbyvJDNexy7bOxo1n9XruDNPOd5JtXTj/FUXN0agTiGEBCmKqjeWHYiZ9yZ52fUKr1o4lgnO9HaEWdM8i/Kd7loqmjkxZs35zSuoqictdu+Kx6mbnnrTA+g24wDuORaqBBFCncVcE/MrXT3zSeWHVirtTgFiDrJg8C7TW6t8fY8cHyzQS7gEiUYUnnYa8CvowvUuUDTCe9pS+y/2FK8L4mcagGRPOwGkuZI/idA4vbMRlroWuzgcolzZqi0A937rNUtMIT2En890FC9kSgBf3hqdYLJwxatQUx6lrWU97vzqF10CWI9dlzyzMCPnl53APICeVqc6QGoqLOZ10AEL/nf9NOo5+T/ViZDOlswqHqzwvTCAbkhI+OD/q6IeZ3JXYUqfmzTU/ZwLrLD1blsqiEFF01clbByQg0ZbE8LMASaAd+d+jNH7RHgjtTkt3zYVdwr3twG9S0AO6LNBe58PrC+g3QENYhG97z34kr4rKPtJJwbfHOq6lvkWKJ4jDksA6U5pD8OCfPi0EF4GM7rNpwqzV1d5ZyfeGLHKjMk=
+  - secure: wx7684VDOX7PXh81LnvjDFdAAdTzD0k8QrT/7ShA2kPAbS1H1O+eYPXg8DzMKTaZxZ/MV+tmh+pd1HUvQChhG8YvLO+JsVp+jzRKWKjlgqWPWs1dHygRhU5SoYZX506MXsudEFYVp8M0fMyHdj9ApB06NMLEjKjWFmI3CvrDuk88K48zQAxSKg6Zk41SMVbl5F4DRROckVNyGa+2G5gJfCTRx2+d+uyvLEn8Y3v+cSlp1Dofnnf+i5HH4NqoyspcC3V4EVz+MZ02x6AZTkIzqJ/yYVWMGlQYemgdOvuIyrdGREPCmDQ91Z7FpZEcp7qeOn9E+yAkmSy+uJj8vaCkkzd2ZI6PpHSU3hRXjpkYiJm+ssWTgdLk4fPRe1Ez1RNOMkTrgToZYeZ+HAZrDf3yiIkGUTjqyQ3tRAAfPIXNCBCWiKdIZ9ZqlIbcMzF6kLoiLaq8S65sITF30WfWcaUSN1FQhULA4ENYpnN6+MRHzzAdpfAzZPujmYbqRw9EdVbrmuWrYLCABoaAVoPar5uCo1pQ65wBTuEczEBYatVv7xblgznrWL9n3ljH51T1ZI1SwbCewy7vnOnTf4G3KUkd90FiziSTwt4698LhEVpN57eoPatfmYFXlUCdV50Bi9qEeGxtytKgAi2rKilbB1Wl7wcOFVX1BJQy98JUjF/GXGI=
+language: java
+jdk:
+- openjdk8
+before_install:
+- bash .travis/deploy-codesigning.sh
+install:
+- mvn -N io.takari:maven:wrapper -Dmaven=3.5.0
+- java -version && javac -version && ./mvnw -version -B
+- npm install -g dockerfile_lint
+before_script:
+- ./mvnw de.qaware.maven:go-offline-maven-plugin:resolve-dependencies -DdownloadSources -DdownloadJavadoc -B -Prelease-ossrh
+- find . -type f -name "*.sh" -exec shellcheck -e SC2154 {} \;
+script:
+- ./mvnw clean install -B -Dgpg.skip=true
+- ./mvnw clean org.jacoco:jacoco-maven-plugin:prepare-agent package sonar:sonar -B
+deploy:
+  provider: script
+  script: bash .travis/deploy.sh
+  skip_cleanup: true
+  on:
+    tags: false
+    all_branches: true
+cache:
+  directories:
+  - $HOME/.m2
+  - $HOME/.sonar/cache
