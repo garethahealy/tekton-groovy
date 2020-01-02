@@ -1,0 +1,52 @@
+---
+apiVersion: tekton.dev/v1alpha1
+kind: Task
+metadata:
+  name: groovy
+spec:
+  inputs:
+    params:
+      - name: SCRIPT
+        description: The path to the script to execute
+        type: string
+    resources:
+      - name: scripts
+        type: git
+  steps:
+    - name: groovy-script
+      image: groovy
+      command:
+        - /opt/groovy/bin/groovy
+      args:
+        - "$(inputs.params.SCRIPT)"
+      workingDir: /workspace/scripts
+---
+apiVersion: tekton.dev/v1alpha1
+kind: PipelineResource
+metadata:
+  name: groovy-git
+spec:
+  type: git
+  params:
+    - name: url
+      value: https://github.com/garethahealy/tekton-groovy.git
+---
+apiVersion: tekton.dev/v1alpha1
+kind: Pipeline
+metadata:
+  name: groovy-pipeline
+spec:
+  resources:
+    - name: groovy-git
+      type: git
+  tasks:
+    - name: run-groovy-script
+      taskRef:
+        name: groovy
+      resources:
+        inputs:
+          - name: scripts
+            resource: groovy-git
+      params:
+        - name: SCRIPT
+          value: hello.groovy
